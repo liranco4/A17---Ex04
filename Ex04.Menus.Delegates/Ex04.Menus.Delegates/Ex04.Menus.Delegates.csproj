@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Menu.cs" />
+    <Compile Include="MenuWithInnerMenusCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
