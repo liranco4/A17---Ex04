@@ -30,11 +30,7 @@ namespace Ex04.Menus.Delegates
                 {
                     menuBuilder.Append(string.Format("{0}. {1}", ++menuIndex, menu.MenuName));
                 }
-                
-                
-                
                 int userChoice = getAndcheckInputLegality();
-
             }
         }
 
