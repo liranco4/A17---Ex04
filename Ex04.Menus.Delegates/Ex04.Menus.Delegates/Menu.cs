@@ -8,7 +8,7 @@ namespace Ex04.Menus.Delegates
     {
         protected string r_MenuName;
         
-        Menu(string i_MenuName)
+        protected Menu(string i_MenuName)
         {
             r_MenuName = i_MenuName;
         }
@@ -21,6 +21,6 @@ namespace Ex04.Menus.Delegates
             }
         }
 
-        protected abstract void ExecuteOperationOrShowInnerMenu();
+        internal abstract void ExecuteOperationOrShowInnerMenu();
     }
 }
