@@ -1,11 +1,11 @@
 ﻿using System;
 namespace Ex04.Menus.Delegates
 {
-	public delegate void Executers<T>(T param);
+	public delegate void Executers();
 
 	public class OperationMenu : Menu
 	{
-		public event Executers<Menu> m_InvokeOperations;
+		public event Executers m_InvokeOperations;
 
 		public OperationMenu(string i_MenuName)
 			: base(i_MenuName)
@@ -16,7 +16,7 @@ namespace Ex04.Menus.Delegates
 		{
 			if (m_InvokeOperations != null)
 			{
-				m_InvokeOperations.Invoke(this);
+				m_InvokeOperations.Invoke();
 			}
 		}
 	}
