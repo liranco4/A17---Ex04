@@ -5,7 +5,7 @@ namespace Ex04.Menus.Delegates
 
 	public class OperationMenu : Menu
 	{
-		public event Executers m_InvokeOperations;
+		public event Executers ExecuteMenuOperation;
 
 		public OperationMenu(string i_MenuName)
 			: base(i_MenuName)
@@ -14,9 +14,9 @@ namespace Ex04.Menus.Delegates
 
 		internal override void ExecuteOperationOrShowInnerMenu()
 		{
-			if (m_InvokeOperations != null)
+			if (ExecuteMenuOperation != null)
 			{
-				m_InvokeOperations.Invoke();
+				ExecuteMenuOperation.Invoke();
 			}
 		}
 	}
