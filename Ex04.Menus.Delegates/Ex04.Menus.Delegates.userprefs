@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{60075E6A-C5AF-43DA-A2E5-39DD6AF27EF0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ex04.Menus.Interfaces/ManipulateMenuItem.cs">
+    <Files>
+      <File FileName="Ex04.Menus.Delegates/OperationMenu.cs" Line="10" Column="23" />
+      <File FileName="Ex04.Menus.Delegates/Menu.cs" Line="24" Column="17" />
+      <File FileName="Ex04.Menus.Delegates/MenuWithInnerMenusCollection.cs" Line="19" Column="38" />
+      <File FileName="Ex04.Menus.Test/ShowTime.cs" Line="1" Column="1" />
+      <File FileName="Ex04.Menus.Test/ShowDate.cs" Line="1" Column="1" />
+      <File FileName="Ex04.Menus.Test/ShowVersion.cs" Line="1" Column="1" />
+      <File FileName="Ex04.Menus.Test/CountSpaces.cs" Line="1" Column="1" />
+      <File FileName="Ex04.Menus.Test/CharsCount.cs" Line="1" Column="1" />
+      <File FileName="Ex04.Menus.Test/Program.cs" Line="21" Column="93" />
+      <File FileName="Ex04.Menus.Delegates/MainMenu.cs" Line="18" Column="38" />
+      <File FileName="Ex04.Menus.Interfaces/ManipulateMenuItem.cs" Line="7" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Ex04.Menus.Test PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

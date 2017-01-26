@@ -7,7 +7,8 @@ namespace Ex04.Menus.Delegates
     public class MenuWithInnerMenusCollection : Menu
     {
         private readonly List<Menu> r_MenuCollection;
-        MenuWithInnerMenusCollection(string i_MenuName)
+		protected static Stack<Menu> s_MenusStack = new Stack<Menu>();
+		public MenuWithInnerMenusCollection(string i_MenuName)
             : base(i_MenuName)
         {
             r_MenuCollection = new List<Menu>();
@@ -18,20 +19,42 @@ namespace Ex04.Menus.Delegates
             r_MenuCollection.Add(i_Menu);
         }
 
+		protected virtual string BackOrExitOperation()
+		{
+			return "Back";
+		}
 
         internal override void ExecuteOperationOrShowInnerMenu()
         {
-            if(r_MenuCollection.Capacity != 0)
-            {
-                int menuIndex = 0;
-                StringBuilder menuBuilder = new StringBuilder();
-                menuBuilder.Append(string.Format("{0}. Back", menuIndex));
-                foreach(Menu menu in r_MenuCollection)
-                {
-                    menuBuilder.Append(string.Format("{0}. {1}", ++menuIndex, menu.MenuName));
-                }
-                int userChoice = getAndcheckInputLegality();
-            }
+			bool state = false;
+			if (r_MenuCollection.Capacity != 0)
+			{
+				do
+				{
+					Console.Clear();
+					int menuIndex = 0;
+					StringBuilder menuBuilder = new StringBuilder();
+					menuBuilder.Append(string.Format("{0}{1}___________________________", MenuName, Environment.NewLine));
+					menuBuilder.Append(string.Format("{0}. {1}", menuIndex , BackOrExitOperation()));
+					foreach (Menu menu in r_MenuCollection)
+					{
+						menuBuilder.Append(string.Format("{0}. {1}{2}", ++menuIndex, menu.MenuName, Environment.NewLine));
+					}
+					Console.WriteLine("{0}", menuBuilder.ToString());
+
+					int userChoice = getAndcheckInputLegality();
+					if (userChoice != 0)
+					{
+						r_MenuCollection[userChoice - 1].ExecuteOperationOrShowInnerMenu();
+					}
+					else
+					{
+						state = true;
+					}	
+				}
+					while (!state) ;
+				Console.Clear();
+			}
         }
 
         private int getAndcheckInputLegality()

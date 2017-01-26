@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ex04.Menus.Delegates
 {
-    internal abstract class Menu
+    public abstract class Menu
     {
         protected string r_MenuName;
         
