@@ -1,10 +1,11 @@
 ﻿using System;
 namespace Ex04.Menus.Delegates
 {
-	public delegate void ExecuteOperation(Menu i_Menu);
+	public delegate void Executers<T>(T param);
+
 	public class OperationMenu : Menu
 	{
-		public event ExecuteOperation m_InvokeOperation;
+		public event Executers<Menu> m_InvokeOperations;
 
 		public OperationMenu(string i_MenuName)
 			: base(i_MenuName)
@@ -13,9 +14,9 @@ namespace Ex04.Menus.Delegates
 
 		internal override void ExecuteOperationOrShowInnerMenu()
 		{
-			if (m_InvokeOperation != null)
+			if (m_InvokeOperations != null)
 			{
-				m_InvokeOperation.Invoke(this);
+				m_InvokeOperations.Invoke(this);
 			}
 		}
 	}
