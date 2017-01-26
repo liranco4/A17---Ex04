@@ -6,12 +6,12 @@ namespace Ex04.Menus.Interfaces
 {
     public class MainMenu : MenuItemsList
     {
-        private const string Exit = "Exit";
+        private const string k_Exit = "Exit";
 
         public MainMenu(string i_MenuName)
            : base(i_MenuName)
         {
-            this.m_backOrExitMsgToUser = Exit;
+            this.m_BackOrExitMsgToUser = k_Exit;
         }
 
         public void ShowMenu()
