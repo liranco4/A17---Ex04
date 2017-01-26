@@ -12,7 +12,7 @@ namespace Ex04.Menus.Test
             Console.WriteLine("Please enter a sentence:");
             string inputFromUser = Console.ReadLine();
             int numberOfSpacesInSentence = this.countNumOfSpacesInSentence(inputFromUser);
-            Console.WriteLine("there are {0} Spaces in the sentence", numberOfSpacesInSentence);
+            Console.WriteLine("There are {0} Spaces in the sentence", numberOfSpacesInSentence);
         }
 
         private int countNumOfSpacesInSentence(string i_SentenceFromUser)

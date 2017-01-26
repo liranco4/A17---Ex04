@@ -8,6 +8,8 @@ namespace Ex04.Menus.Delegates
     {
         private readonly List<MenuItem> r_MenuCollection;
 		protected static Stack<MenuItem> s_MenusStack = new Stack<MenuItem>();
+        private const string k_Back = "Back";
+
 		public MenuWithInnerMenusCollection(string i_MenuName)
             : base(i_MenuName)
         {
@@ -19,9 +21,9 @@ namespace Ex04.Menus.Delegates
             r_MenuCollection.Add(i_Menu);
         }
 
-		protected virtual string BackOrExitOperation()
+		protected virtual string BackOrExitOperation
 		{
-			return "Back";
+			get{ return k_Back;}
 		}
 
         internal override void ExecuteOperationOrShowInnerMenu()
@@ -35,7 +37,7 @@ namespace Ex04.Menus.Delegates
 					int menuIndex = 0;
 					StringBuilder menuBuilder = new StringBuilder();
 					menuBuilder.Append(string.Format("{0}{1}___________________________{1}", MenuName, Environment.NewLine));
-					menuBuilder.Append(string.Format("{0}. {1}{2}", menuIndex , BackOrExitOperation(), Environment.NewLine));
+                    menuBuilder.Append(string.Format("{0}. {1}{2}", menuIndex, BackOrExitOperation, Environment.NewLine));
 					foreach (MenuItem menu in r_MenuCollection)
 					{
 						menuBuilder.Append(string.Format("{0}. {1}{2}", ++menuIndex, menu.MenuName, Environment.NewLine));

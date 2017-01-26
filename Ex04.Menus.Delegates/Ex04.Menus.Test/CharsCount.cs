@@ -12,7 +12,7 @@ namespace Ex04.Menus.Test
             Console.WriteLine("Please enter a sentence:");
             string inputFromUser = Console.ReadLine();
             int numberOfLettersInSentence = this.countNumOfLettersInSentence(inputFromUser);
-            Console.WriteLine("there are {0} letters in the sentence", numberOfLettersInSentence);
+            Console.WriteLine("There are {0} letters in the sentence", numberOfLettersInSentence);
         }
 
         private int countNumOfLettersInSentence(string i_SentenceFromUser)
