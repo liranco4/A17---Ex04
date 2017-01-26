@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex04.Menus.Delegates", "Ex04.Menus.Delegates\Ex04.Menus.Delegates.csproj", "{BC3C4DDA-F04B-4559-9071-B362FEAE7BCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex04.Menus.Interfaces", "Ex04.Menus.Interfaces\Ex04.Menus.Interfaces.csproj", "{417A4D5A-E7A7-4E82-80FA-475179F4A50D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BC3C4DDA-F04B-4559-9071-B362FEAE7BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC3C4DDA-F04B-4559-9071-B362FEAE7BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC3C4DDA-F04B-4559-9071-B362FEAE7BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{417A4D5A-E7A7-4E82-80FA-475179F4A50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{417A4D5A-E7A7-4E82-80FA-475179F4A50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{417A4D5A-E7A7-4E82-80FA-475179F4A50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{417A4D5A-E7A7-4E82-80FA-475179F4A50D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
