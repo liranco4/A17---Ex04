@@ -11,13 +11,12 @@ namespace Ex04.Menus.Test
         {
             Console.WriteLine("Please enter a sentence:");
             string inputFromUser = Console.ReadLine();
-            int numberOfLettersInSentence = countNumOfLettersInSentence(inputFromUser);
+            int numberOfLettersInSentence = this.countNumOfLettersInSentence(inputFromUser);
             Console.WriteLine("there are {0} letters in the sentence", numberOfLettersInSentence);
         }
 
         private int countNumOfLettersInSentence(string i_SentenceFromUser)
         {
-          //  int numbersOfLetters = i_SentenceFromUser.ToCharArray().Length;
             int countNumOfLetters = 0;
 
             foreach (char letter in i_SentenceFromUser.ToLower())
