@@ -36,19 +36,36 @@ namespace Ex04.Menus.Test
 
 		private static void RunDelegateMenu()
 		{
-			//Delegates.MainMenu mainMenu = new Delegates.MainMenu("Main Menu - Delegate");
-			//Delegates.MenuWithInnerMenusCollection dateTimeMenu = new Delegates.MenuWithInnerMenusCollection("Show Date/Time");
-			//Delegates.OperationMenu showDateMenu = new Delegates.OperationMenu("Show Date");
-			//Delegates.OperationMenu showTimeMenu = new Delegates.OperationMenu("Show Time");
+			Delegates.MainMenu mainMenu = new Delegates.MainMenu("Main Menu - Delegate");
+			Delegates.MenuWithInnerMenusCollection dateTimeMenu = new Delegates.MenuWithInnerMenusCollection("Show Date/Time");
+			Delegates.OperationMenu showDateMenu = new Delegates.OperationMenu("Show Date");
+			Delegates.OperationMenu showTimeMenu = new Delegates.OperationMenu("Show Time");
 
-			//dateTimeMenu.AddToCollection(showDateMenu);
-			//dateTimeMenu.AddToCollection(showTimeMenu);
-
-			//showTimeMenu.m_InvokeOperations += ShowDate;
-			//Delegates.MenuWithInnerMenusCollection versionAndActionsMenu = new Delegates.MenuWithInnerMenusCollection("Version And Actions");
+			dateTimeMenu.AddToCollection(showDateMenu);
+			dateTimeMenu.AddToCollection(showTimeMenu);
 
 
+			showDateMenu.ExecuteMenuOperation += new ShowDate().ExecuteUserChoice;
+			showTimeMenu.ExecuteMenuOperation += new ShowTime().ExecuteUserChoice;
 
+			Delegates.MenuWithInnerMenusCollection versionAndActionsMenu = new Delegates.MenuWithInnerMenusCollection("Version And Actions");
+			Delegates.OperationMenu versionMenu = new Delegates.OperationMenu("Show Version");
+			Delegates.MenuWithInnerMenusCollection actionsMenu = new Delegates.MenuWithInnerMenusCollection("Actions");
+
+			versionAndActionsMenu.AddToCollection(versionMenu);
+			versionAndActionsMenu.AddToCollection(actionsMenu);
+
+			versionMenu.ExecuteMenuOperation += new ShowVersion().ExecuteUserChoice;
+
+
+			Delegates.OperationMenu charsCounterMenu = new Delegates.OperationMenu("Chars Counter");
+			Delegates.OperationMenu countSpacesMenu = new Delegates.OperationMenu("Count Spaces");
+
+			actionsMenu.AddToCollection(charsCounterMenu);
+			actionsMenu.AddToCollection(countSpacesMenu);
+
+			charsCounterMenu.ExecuteMenuOperation += new CharsCount().ExecuteUserChoice;
+			countSpacesMenu.ExecuteMenuOperation += new CountSpaces().ExecuteUserChoice;
 		}
     }
 }
