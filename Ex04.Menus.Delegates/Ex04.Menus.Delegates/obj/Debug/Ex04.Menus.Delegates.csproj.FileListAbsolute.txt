@@ -3,3 +3,8 @@ C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Delegates\bin\Debu
 C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Delegates\bin\Debug\Ex04.Menus.Delegates.pdb
 C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.dll
 C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.pdb
+C:\Users\liran-vm64\Documents\Visual Studio 2013\Projects\A17-Ex04\Ex04.Menus.Delegates\Ex04.Menus.Delegates\bin\Debug\Ex04.Menus.Delegates.dll
+C:\Users\liran-vm64\Documents\Visual Studio 2013\Projects\A17-Ex04\Ex04.Menus.Delegates\Ex04.Menus.Delegates\bin\Debug\Ex04.Menus.Delegates.pdb
+C:\Users\liran-vm64\Documents\Visual Studio 2013\Projects\A17-Ex04\Ex04.Menus.Delegates\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.csprojResolveAssemblyReference.cache
+C:\Users\liran-vm64\Documents\Visual Studio 2013\Projects\A17-Ex04\Ex04.Menus.Delegates\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.dll
+C:\Users\liran-vm64\Documents\Visual Studio 2013\Projects\A17-Ex04\Ex04.Menus.Delegates\Ex04.Menus.Delegates\obj\Debug\Ex04.Menus.Delegates.pdb
