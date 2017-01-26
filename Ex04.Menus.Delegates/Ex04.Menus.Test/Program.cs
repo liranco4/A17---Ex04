@@ -9,7 +9,8 @@ namespace Ex04.Menus.Test
     {
         public static void Main()
         {
-            RunInterfaceMenu();
+            RunDelegateMenu();
+            //RunInterfaceMenu();
         }
 
         private static void RunInterfaceMenu()
@@ -66,6 +67,10 @@ namespace Ex04.Menus.Test
 
 			charsCounterMenu.ExecuteMenuOperation += new CharsCount().ExecuteUserChoice;
 			countSpacesMenu.ExecuteMenuOperation += new CountSpaces().ExecuteUserChoice;
+
+            mainMenu.AddToCollection(dateTimeMenu);
+            mainMenu.AddToCollection(versionAndActionsMenu);
+            mainMenu.Show();
 		}
     }
 }

@@ -3,3 +3,7 @@ C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\bin\Deb
 C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.csprojResolveAssemblyReference.cache
 C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.dll
 C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\liran-vm64\Documents\Visual Studio 2013\Projects\A17-Ex04\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\liran-vm64\Documents\Visual Studio 2013\Projects\A17-Ex04\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\liran-vm64\Documents\Visual Studio 2013\Projects\A17-Ex04\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\liran-vm64\Documents\Visual Studio 2013\Projects\A17-Ex04\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.pdb
