@@ -1,0 +1,5 @@
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\bin\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Interfaces\obj\Debug\Ex04.Menus.Interfaces.pdb

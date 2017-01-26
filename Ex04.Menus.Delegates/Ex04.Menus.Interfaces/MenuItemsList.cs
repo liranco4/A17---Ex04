@@ -8,7 +8,7 @@ namespace Ex04.Menus.Interfaces
     {
         private readonly List<MenuItem> r_MenuItems = new List<MenuItem>();
         protected string m_backOrExitMsgToUser = "Back";
-            
+
         public MenuItemsList(string i_MenuHeaderName)
             : base(i_MenuHeaderName)
         {
@@ -25,7 +25,7 @@ namespace Ex04.Menus.Interfaces
                 do
                 {
                     Lineindex = 1;
-                    MenuToPrint.AppendLine(string.Format("{0}{1}", MenuName, "=============="));
+                    MenuToPrint.AppendLine(string.Format("{0}{1}{2}", MenuName, Environment.NewLine, "====================="));
 
                     foreach (MenuItem Item in r_MenuItems)
                     {
@@ -34,8 +34,10 @@ namespace Ex04.Menus.Interfaces
                     }
 
                     MenuToPrint.Append(string.Format("0. {0}{1}", m_backOrExitMsgToUser, Environment.NewLine));
-                    MenuToPrint.Append(string.Format("Please enter input from menu (between 0 to {0}{1}):", r_MenuItems.Count, Environment.NewLine));
+                    MenuToPrint.Append(string.Format("Please enter input from menu (between 0 to {0}):", r_MenuItems.Count));
                     Console.Write(MenuToPrint);
+                    MenuToPrint.Length = 0;
+                    MenuToPrint.Capacity = 0;
                 }
                 while (!manipulateUserInput());
 
@@ -43,7 +45,7 @@ namespace Ex04.Menus.Interfaces
             }
             else
             {
-
+                Console.WriteLine("invalid operation");
             }
         }
 
@@ -74,16 +76,31 @@ namespace Ex04.Menus.Interfaces
             int userInput = 0;
             do
             {
-                isInputValid = int.TryParse(Console.ReadLine(), out userInput);
+                try
+                {
+                    isInputValid = int.TryParse(Console.ReadLine(), out userInput);
 
-                if (!isInputValid && userInput >= 0 && userInput <= r_MenuItems.Count)
+                    if (!isInputValid)
+                    {
+                        loopFlag = false;
+                        Console.Write("Please enter valid input:");
+                    }
+
+                    else if (userInput >= 0 && userInput <= r_MenuItems.Count)
+                    {
+                        loopFlag = true;
+                        break;
+                    }
+                    else
+                    {
+                        loopFlag = false;
+                        Console.Write("Please enter valid input:");
+                    }
+                }
+                catch (Exception exArgument)
                 {
                     loopFlag = false;
                     Console.Write("Please enter valid input:");
-                }
-                else
-                {
-                    loopFlag = true;
                 }
             }
             while (!loopFlag);

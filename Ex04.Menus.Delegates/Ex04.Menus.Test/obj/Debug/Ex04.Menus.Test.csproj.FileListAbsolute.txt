@@ -1,0 +1,9 @@
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csprojResolveAssemblyReference.cache
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.exe
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.pdb
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Delegates.dll
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Delegates.pdb
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.pdb
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.exe
+C:\Users\Eltur\Documents\GIT5\Ex04.Menus.Delegates\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.pdb

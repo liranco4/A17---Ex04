@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces
 {
-    class ManipulateMenuItem : MenuItem
+    public class ManipulateMenuItem : MenuItem
     {
         private IManipulateUserChoice m_UserChoice;
 
