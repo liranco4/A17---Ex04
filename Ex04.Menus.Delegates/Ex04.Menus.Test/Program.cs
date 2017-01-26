@@ -36,16 +36,16 @@ namespace Ex04.Menus.Test
 
 		private static void RunDelegateMenu()
 		{
-			Delegates.MainMenu mainMenu = new Delegates.MainMenu("Main Menu - Delegate");
-			Delegates.MenuWithInnerMenusCollection dateTimeMenu = new Delegates.MenuWithInnerMenusCollection("Show Date/Time");
-			Delegates.OperationMenu showDateMenu = new Delegates.OperationMenu("Show Date");
-			Delegates.OperationMenu showTimeMenu = new Delegates.OperationMenu("Show Time");
+			//Delegates.MainMenu mainMenu = new Delegates.MainMenu("Main Menu - Delegate");
+			//Delegates.MenuWithInnerMenusCollection dateTimeMenu = new Delegates.MenuWithInnerMenusCollection("Show Date/Time");
+			//Delegates.OperationMenu showDateMenu = new Delegates.OperationMenu("Show Date");
+			//Delegates.OperationMenu showTimeMenu = new Delegates.OperationMenu("Show Time");
 
-			dateTimeMenu.AddToCollection(showDateMenu);
-			dateTimeMenu.AddToCollection(showTimeMenu);
+			//dateTimeMenu.AddToCollection(showDateMenu);
+			//dateTimeMenu.AddToCollection(showTimeMenu);
 
-			showTimeMenu.m_InvokeOperations += ShowDate;
-			Delegates.MenuWithInnerMenusCollection versionAndActionsMenu = new Delegates.MenuWithInnerMenusCollection("Version And Actions");
+			//showTimeMenu.m_InvokeOperations += ShowDate;
+			//Delegates.MenuWithInnerMenusCollection versionAndActionsMenu = new Delegates.MenuWithInnerMenusCollection("Version And Actions");
 
 
 
