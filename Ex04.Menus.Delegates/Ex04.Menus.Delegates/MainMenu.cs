@@ -1,5 +1,4 @@
-﻿using System;
-namespace Ex04.Menus.Delegates
+﻿namespace Ex04.Menus.Delegates
 {
 	public class MainMenu : MenuWithInnerMenusCollection
 	{
@@ -16,7 +15,7 @@ namespace Ex04.Menus.Delegates
 
 		public void Show()
 		{
-			ExecuteOperationOrShowInnerMenu();
+			this.OnExecuteOperationOrShowInnerMenu();
 		}
 	}
 }

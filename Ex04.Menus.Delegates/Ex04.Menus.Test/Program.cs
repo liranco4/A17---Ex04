@@ -5,7 +5,7 @@ using Ex04.Menus;
 
 namespace Ex04.Menus.Test
 {
-    class Program
+   public class Program
     {
         public static void Main()
         {
@@ -18,7 +18,7 @@ namespace Ex04.Menus.Test
             Interfaces.MainMenu mainMenuInterface = new Interfaces.MainMenu("Main Menu - Interface");
             Interfaces.MenuItemsList timeDateMenuItemInterface = new Interfaces.MenuItemsList("Show Date/Time");
             Interfaces.MenuItemsList versionAndActionsMenuItemInterface = new Interfaces.MenuItemsList("Version And Actions");
-            Interfaces.MenuItemsList ActionsMenuItemInterface = new Interfaces.MenuItemsList("Actions");
+            Interfaces.MenuItemsList actionsMenuItemInterface = new Interfaces.MenuItemsList("Actions");
             Interfaces.ManipulateMenuItem showTimeItemInterface = new Interfaces.ManipulateMenuItem("Show Time", new ShowTime());
             Interfaces.ManipulateMenuItem showDateItemInterface = new Interfaces.ManipulateMenuItem("Show Date", new ShowDate());
             Interfaces.ManipulateMenuItem versionMenuItemInterface = new Interfaces.ManipulateMenuItem("Show Version", new ShowVersion());
@@ -27,40 +27,40 @@ namespace Ex04.Menus.Test
             timeDateMenuItemInterface.AddItemToMenu(showTimeItemInterface);
             timeDateMenuItemInterface.AddItemToMenu(showDateItemInterface);
             versionAndActionsMenuItemInterface.AddItemToMenu(versionMenuItemInterface);
-            ActionsMenuItemInterface.AddItemToMenu(charsCounterItemInterface);
-            ActionsMenuItemInterface.AddItemToMenu(countSpacesItemInterface);
-            versionAndActionsMenuItemInterface.AddItemToMenu(ActionsMenuItemInterface);
+            actionsMenuItemInterface.AddItemToMenu(charsCounterItemInterface);
+            actionsMenuItemInterface.AddItemToMenu(countSpacesItemInterface);
+            versionAndActionsMenuItemInterface.AddItemToMenu(actionsMenuItemInterface);
             mainMenuInterface.AddItemToMenu(timeDateMenuItemInterface);
             mainMenuInterface.AddItemToMenu(versionAndActionsMenuItemInterface);
             mainMenuInterface.Show();
         }
 
-		private static void RunDelegateMenu()
-		{
-			Delegates.MainMenu mainMenu = new Delegates.MainMenu("Main Menu - Delegate");
-			Delegates.MenuWithInnerMenusCollection dateTimeMenu = new Delegates.MenuWithInnerMenusCollection("Show Date/Time");
-			Delegates.OperationMenu showDateMenu = new Delegates.OperationMenu("Show Date");
-			Delegates.OperationMenu showTimeMenu = new Delegates.OperationMenu("Show Time");
-			dateTimeMenu.AddToCollection(showDateMenu);
-			dateTimeMenu.AddToCollection(showTimeMenu);
-			showDateMenu.ExecuteMenuOperation += showDate;
+        private static void RunDelegateMenu()
+        {
+            Delegates.MainMenu mainMenu = new Delegates.MainMenu("Main Menu - Delegate");
+            Delegates.MenuWithInnerMenusCollection dateTimeMenu = new Delegates.MenuWithInnerMenusCollection("Show Date/Time");
+            Delegates.OperationMenu showDateMenu = new Delegates.OperationMenu("Show Date");
+            Delegates.OperationMenu showTimeMenu = new Delegates.OperationMenu("Show Time");
+            dateTimeMenu.AddToCollection(showDateMenu);
+            dateTimeMenu.AddToCollection(showTimeMenu);
+            showDateMenu.ExecuteMenuOperation += showDate;
             showTimeMenu.ExecuteMenuOperation += showTime;
-			Delegates.MenuWithInnerMenusCollection versionAndActionsMenu = new Delegates.MenuWithInnerMenusCollection("Version And Actions");
-			Delegates.OperationMenu versionMenu = new Delegates.OperationMenu("Show Version");
-			Delegates.MenuWithInnerMenusCollection actionsMenu = new Delegates.MenuWithInnerMenusCollection("Actions");
-			versionAndActionsMenu.AddToCollection(versionMenu);
-			versionAndActionsMenu.AddToCollection(actionsMenu);
+            Delegates.MenuWithInnerMenusCollection versionAndActionsMenu = new Delegates.MenuWithInnerMenusCollection("Version And Actions");
+            Delegates.OperationMenu versionMenu = new Delegates.OperationMenu("Show Version");
+            Delegates.MenuWithInnerMenusCollection actionsMenu = new Delegates.MenuWithInnerMenusCollection("Actions");
+            versionAndActionsMenu.AddToCollection(versionMenu);
+            versionAndActionsMenu.AddToCollection(actionsMenu);
             versionMenu.ExecuteMenuOperation += showVersion;
-			Delegates.OperationMenu charsCounterMenu = new Delegates.OperationMenu("Letters Counter");
-			Delegates.OperationMenu countSpacesMenu = new Delegates.OperationMenu("Count Spaces");
-			actionsMenu.AddToCollection(charsCounterMenu);
-			actionsMenu.AddToCollection(countSpacesMenu);
+            Delegates.OperationMenu charsCounterMenu = new Delegates.OperationMenu("Letters Counter");
+            Delegates.OperationMenu countSpacesMenu = new Delegates.OperationMenu("Count Spaces");
+            actionsMenu.AddToCollection(charsCounterMenu);
+            actionsMenu.AddToCollection(countSpacesMenu);
             charsCounterMenu.ExecuteMenuOperation += charsCounter;
             countSpacesMenu.ExecuteMenuOperation += spacesCounter;
             mainMenu.AddToCollection(dateTimeMenu);
             mainMenu.AddToCollection(versionAndActionsMenu);
             mainMenu.Show();
-		}
+        }
 
         private static void showDate()
         {
@@ -123,6 +123,5 @@ namespace Ex04.Menus.Test
 
             return countNumOfLetters;
         }
-
     }
 }
