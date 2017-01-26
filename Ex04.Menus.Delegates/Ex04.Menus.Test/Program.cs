@@ -32,7 +32,7 @@ namespace Ex04.Menus.Test
             versionAndActionsMenuItemInterface.AddItemToMenu(ActionsMenuItemInterface);
             mainMenuInterface.AddItemToMenu(timeDateMenuItemInterface);
             mainMenuInterface.AddItemToMenu(versionAndActionsMenuItemInterface);
-            mainMenuInterface.ShowMenu();
+            mainMenuInterface.Show();
         }
 
 		private static void RunDelegateMenu()

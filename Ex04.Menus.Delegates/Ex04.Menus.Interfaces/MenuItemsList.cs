@@ -6,10 +6,10 @@ namespace Ex04.Menus.Interfaces
 {
     public class MenuItemsList : MenuItem
     {
-        private const string Back = "Back";
-        private const int zero = 0;
+        private const string k_Back = "Back";
+        private const int k_Zero = 0;
         private readonly List<MenuItem> r_MenuItems = new List<MenuItem>();
-        protected string m_backOrExitMsgToUser = Back;
+        protected string m_BackOrExitMsgToUser = k_Back;
      
         public MenuItemsList(string i_MenuHeaderName)
             : base(i_MenuHeaderName)
@@ -21,33 +21,33 @@ namespace Ex04.Menus.Interfaces
         /// </summary>
         internal override void ExecuteActionOrSubMenu()
         {
-            StringBuilder MenuToPrint = new StringBuilder();
+            StringBuilder menuToPrint = new StringBuilder();
             bool backOrExitFlag = false;
             int userChoice;
 
             if (this.r_MenuItems != null)
             {
-                int Lineindex = zero;
+                int lineindex = k_Zero;
 
                 do
                 {
-                    Lineindex = 1;
-                    MenuToPrint.AppendLine(string.Format("{0}{1}{2}", this.MenuName, Environment.NewLine, "====================="));
+                    lineindex = 1;
+                    menuToPrint.AppendLine(string.Format("{0}{1}{2}", this.MenuName, Environment.NewLine, "====================="));
 
-                    foreach (MenuItem Item in this.r_MenuItems)
+                    foreach (MenuItem item in this.r_MenuItems)
                     {
-                        MenuToPrint.Append(string.Format("{0}- {1}{2}", Lineindex, Item.MenuName, Environment.NewLine));
-                        Lineindex++;
+                        menuToPrint.Append(string.Format("{0}- {1}{2}", lineindex, item.MenuName, Environment.NewLine));
+                        lineindex++;
                     }
 
-                    MenuToPrint.Append(string.Format("0. {0}{1}", this.m_backOrExitMsgToUser, Environment.NewLine));
-                    MenuToPrint.Append(string.Format("Please enter input from menu (between 0 to {0}):", this.r_MenuItems.Count));
-                    Console.Write(MenuToPrint);
-                    MenuToPrint.Length = zero;
-                    MenuToPrint.Capacity = zero;
-                    userChoice = this.CheckUserInput();
+                    menuToPrint.Append(string.Format("0. {0}{1}", this.m_BackOrExitMsgToUser, Environment.NewLine));
+                    menuToPrint.Append(string.Format("Please enter input from menu (between 0 to {0}):", this.r_MenuItems.Count));
+                    Console.Write(menuToPrint);
+                    menuToPrint.Length = k_Zero;
+                    menuToPrint.Capacity = k_Zero;
+                    userChoice = this.checkUserInput();
 
-                    if (userChoice == zero)
+                    if (userChoice == k_Zero)
                     {
                         backOrExitFlag = true;
                     }
@@ -70,11 +70,11 @@ namespace Ex04.Menus.Interfaces
         /// <summary>
         /// Method to check if user input is legal 
         /// </summary>
-        private int CheckUserInput()
+        private int checkUserInput()
         {
             bool isInputValid = true;
             bool loopFlag = true;
-            int userInput = zero;
+            int userInput = k_Zero;
             do
             {
                 isInputValid = int.TryParse(Console.ReadLine(), out userInput);
@@ -84,7 +84,7 @@ namespace Ex04.Menus.Interfaces
                     loopFlag = false;
                     Console.Write("Please enter valid input:");
                 }
-                else if (userInput >= zero && userInput <= this.r_MenuItems.Count)
+                else if (userInput >= k_Zero && userInput <= this.r_MenuItems.Count)
                 {
                     loopFlag = true;
                     break;
