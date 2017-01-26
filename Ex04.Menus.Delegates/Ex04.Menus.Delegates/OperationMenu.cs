@@ -3,7 +3,7 @@ namespace Ex04.Menus.Delegates
 {
 	public delegate void Executers();
 
-	public class OperationMenu : Menu
+	public class OperationMenu : MenuItem
 	{
 		public event Executers ExecuteMenuOperation;
 

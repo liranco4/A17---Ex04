@@ -10,7 +10,7 @@ namespace Ex04.Menus.Test
         public static void Main()
         {
             RunDelegateMenu();
-            //RunInterfaceMenu();
+            RunInterfaceMenu();
         }
 
         private static void RunInterfaceMenu()

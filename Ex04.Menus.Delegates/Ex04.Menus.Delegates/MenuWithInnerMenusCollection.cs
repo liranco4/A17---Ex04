@@ -4,17 +4,17 @@ using System.Text;
 
 namespace Ex04.Menus.Delegates
 {
-    public class MenuWithInnerMenusCollection : Menu
+    public class MenuWithInnerMenusCollection : MenuItem
     {
-        private readonly List<Menu> r_MenuCollection;
-		protected static Stack<Menu> s_MenusStack = new Stack<Menu>();
+        private readonly List<MenuItem> r_MenuCollection;
+		protected static Stack<MenuItem> s_MenusStack = new Stack<MenuItem>();
 		public MenuWithInnerMenusCollection(string i_MenuName)
             : base(i_MenuName)
         {
-            r_MenuCollection = new List<Menu>();
+            r_MenuCollection = new List<MenuItem>();
         }
 
-        public void AddToCollection(Menu i_Menu)
+        public void AddToCollection(MenuItem i_Menu)
         {
             r_MenuCollection.Add(i_Menu);
         }
@@ -36,7 +36,7 @@ namespace Ex04.Menus.Delegates
 					StringBuilder menuBuilder = new StringBuilder();
 					menuBuilder.Append(string.Format("{0}{1}___________________________{1}", MenuName, Environment.NewLine));
 					menuBuilder.Append(string.Format("{0}. {1}{2}", menuIndex , BackOrExitOperation(), Environment.NewLine));
-					foreach (Menu menu in r_MenuCollection)
+					foreach (MenuItem menu in r_MenuCollection)
 					{
 						menuBuilder.Append(string.Format("{0}. {1}{2}", ++menuIndex, menu.MenuName, Environment.NewLine));
 					}
