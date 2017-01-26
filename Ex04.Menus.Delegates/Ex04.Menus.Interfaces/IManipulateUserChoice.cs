@@ -9,4 +9,3 @@ namespace Ex04.Menus.Interfaces
         void ExecuteUserChoice();
     }
 }
-

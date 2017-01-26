@@ -11,12 +11,12 @@ namespace Ex04.Menus.Interfaces
         public MainMenu(string i_MenuName)
            : base(i_MenuName)
         {
-            m_backOrExitMsgToUser = Exit;
+            this.m_backOrExitMsgToUser = Exit;
         }
 
         public void ShowMenu()
         {
-            ExecuteActionOrSubMenu();
+            this.ExecuteActionOrSubMenu();
         }
     }
 }

@@ -10,13 +10,13 @@ namespace Ex04.Menus.Interfaces
 
         public MenuItem(string i_MenuName)
         {
-            m_MenuHeaderName = i_MenuName;
+            this.m_MenuHeaderName = i_MenuName;
         }
 
         public string MenuName
         {
-            get { return m_MenuHeaderName; }
-            set { m_MenuHeaderName = value; }
+            get { return this.m_MenuHeaderName; }
+            set { this.m_MenuHeaderName = value; }
         }
 
         internal abstract void ExecuteActionOrSubMenu();
