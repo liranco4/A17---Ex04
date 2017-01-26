@@ -7,7 +7,8 @@ namespace Ex04.Menus.Interfaces
     public class MenuItemsList : MenuItem
     {
         private readonly List<MenuItem> r_MenuItems = new List<MenuItem>();
-        protected string m_backOrExitMsgToUser = "Back";
+        private const string Back = "Back";
+        protected string m_backOrExitMsgToUser = Back;
 
         public MenuItemsList(string i_MenuHeaderName)
             : base(i_MenuHeaderName)
