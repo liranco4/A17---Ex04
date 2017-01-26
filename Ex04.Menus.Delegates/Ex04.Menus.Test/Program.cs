@@ -44,6 +44,7 @@ namespace Ex04.Menus.Test
 			dateTimeMenu.AddToCollection(showDateMenu);
 			dateTimeMenu.AddToCollection(showTimeMenu);
 
+
 			showDateMenu.ExecuteMenuOperation += new ShowDate().ExecuteUserChoice;
 			showTimeMenu.ExecuteMenuOperation += new ShowTime().ExecuteUserChoice;
 

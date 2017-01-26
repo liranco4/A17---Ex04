@@ -18,6 +18,8 @@ namespace Ex04.Menus.Interfaces
         internal override void ExecuteActionOrSubMenu()
         {
             StringBuilder MenuToPrint = new StringBuilder();
+            bool backOrExitFlag = false;
+            int userChoice;
 
             if (r_MenuItems != null)
             {
@@ -39,8 +41,19 @@ namespace Ex04.Menus.Interfaces
                     Console.Write(MenuToPrint);
                     MenuToPrint.Length = 0;
                     MenuToPrint.Capacity = 0;
+                    userChoice = CheckUserInput();
+             
+                    if (userChoice == 0)
+                    {
+                        backOrExitFlag = true;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        r_MenuItems[userChoice - 1].ExecuteActionOrSubMenu();
+                    }
                 }
-                while (!manipulateUserInput());
+                while (!backOrExitFlag);
 
                 Console.Clear();
             }
@@ -49,26 +62,6 @@ namespace Ex04.Menus.Interfaces
                 Console.WriteLine("invalid operation");
             }
         }
-
-        private bool manipulateUserInput()
-        {
-            bool backOrExitFlag = false;
-            int userChoice;
-
-            userChoice = CheckUserInput();
-            if (userChoice == 0)
-            {
-                backOrExitFlag = true;
-            }
-            else
-            {
-                Console.Clear();
-                r_MenuItems[userChoice - 1].ExecuteActionOrSubMenu();
-            }
-
-            return backOrExitFlag;
-        }
-
 
         private int CheckUserInput()
         {
@@ -108,7 +101,6 @@ namespace Ex04.Menus.Interfaces
 
             return userInput;
         }
-
 
         public void AddItemToMenu(MenuItem i_MenuItemToAdd)
         {
