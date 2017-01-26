@@ -17,17 +17,18 @@ namespace Ex04.Menus.Test
             Interfaces.MainMenu mainMenuInterface = new Interfaces.MainMenu("Main Menu - Interface");
             Interfaces.MenuItemsList timeDateMenuItemInterface = new Interfaces.MenuItemsList("Show Date/Time");
             Interfaces.MenuItemsList versionAndActionsMenuItemInterface = new Interfaces.MenuItemsList("Version And Actions");
-
+            Interfaces.MenuItemsList ActionsMenuItemInterface = new Interfaces.MenuItemsList("Actions");
             Interfaces.ManipulateMenuItem showTimeItemInterface = new Interfaces.ManipulateMenuItem("Show Time", new ShowTime());
             Interfaces.ManipulateMenuItem showDateItemInterface = new Interfaces.ManipulateMenuItem("Show Date", new ShowDate());
             Interfaces.ManipulateMenuItem versionMenuItemInterface = new Interfaces.ManipulateMenuItem("Show Version", new ShowVersion());
-   
-
+            Interfaces.ManipulateMenuItem charsCounterItemInterface = new Interfaces.ManipulateMenuItem("Chars Counter", new CharsCount());
+            Interfaces.ManipulateMenuItem countSpacesItemInterface = new Interfaces.ManipulateMenuItem("Count Spaces", new CountSpaces());
             timeDateMenuItemInterface.AddItemToMenu(showTimeItemInterface);
             timeDateMenuItemInterface.AddItemToMenu(showDateItemInterface);
-
             versionAndActionsMenuItemInterface.AddItemToMenu(versionMenuItemInterface);
-
+            ActionsMenuItemInterface.AddItemToMenu(charsCounterItemInterface);
+            ActionsMenuItemInterface.AddItemToMenu(countSpacesItemInterface);
+            versionAndActionsMenuItemInterface.AddItemToMenu(ActionsMenuItemInterface);
             mainMenuInterface.AddItemToMenu(timeDateMenuItemInterface);
             mainMenuInterface.AddItemToMenu(versionAndActionsMenuItemInterface);
             mainMenuInterface.ShowMenu();
