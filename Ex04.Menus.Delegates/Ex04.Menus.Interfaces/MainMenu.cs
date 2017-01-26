@@ -14,7 +14,7 @@ namespace Ex04.Menus.Interfaces
             this.m_BackOrExitMsgToUser = k_Exit;
         }
 
-        public void ShowMenu()
+        public void Show()
         {
             this.ExecuteActionOrSubMenu();
         }
