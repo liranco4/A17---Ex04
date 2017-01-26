@@ -37,6 +37,8 @@
   <ItemGroup>
     <Compile Include="Menu.cs" />
     <Compile Include="MenuWithInnerMenusCollection.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="OperationMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{60075E6A-C5AF-43DA-A2E5-39DD6AF27EF0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ex04.Menus.Delegates/OperationMenu.cs">
+    <Files>
+      <File FileName="Ex04.Menus.Delegates/OperationMenu.cs" Line="13" Column="3" />
+      <File FileName="Ex04.Menus.Delegates/Menu.cs" Line="24" Column="17" />
+      <File FileName="Ex04.Menus.Delegates/MenuWithInnerMenusCollection.cs" Line="38" Column="85" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Ex04.Menus.Test PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
