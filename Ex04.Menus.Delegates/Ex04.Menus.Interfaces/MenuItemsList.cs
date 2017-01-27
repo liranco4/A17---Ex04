@@ -75,16 +75,19 @@ namespace Ex04.Menus.Interfaces
             bool isInputValid = true;
             bool loopFlag = true;
             int userInput = k_Zero;
+            string userInputFromConsole = string.Empty;
+
             do
             {
-                isInputValid = int.TryParse(Console.ReadLine(), out userInput);
+                userInputFromConsole = Console.ReadLine();
+                isInputValid = int.TryParse(userInputFromConsole, out userInput);
 
                 if (!isInputValid)
                 {
                     loopFlag = false;
                     Console.Write("Please enter valid input:");
                 }
-                else if (userInput >= k_Zero && userInput <= this.r_MenuItems.Count)
+                else if (userInput >= k_Zero && userInput <= this.r_MenuItems.Count && userInputFromConsole.Length == 1)
                 {
                     loopFlag = true;
                     break;
