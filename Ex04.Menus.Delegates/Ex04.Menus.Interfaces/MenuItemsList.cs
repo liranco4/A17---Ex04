@@ -25,6 +25,11 @@ namespace Ex04.Menus.Interfaces
             }
         }
 
+        public void AddItemToMenuList(MenuItem i_MenuItemToAdd)
+        {
+            this.r_MenuItems.Add(i_MenuItemToAdd);
+        }
+
         internal override void ExecuteActionOrShowSubMenu()
         {
             StringBuilder menuToPrint = new StringBuilder();
@@ -45,6 +50,7 @@ namespace Ex04.Menus.Interfaces
                         menuToPrint.Append(string.Format("{0}. {1}{2}", lineindex, item.MenuName, Environment.NewLine));
                         lineindex++;
                     }
+
                     Console.Write(menuToPrint);
                     menuToPrint.Length = k_Zero;
                     menuToPrint.Capacity = k_Zero;
@@ -70,7 +76,7 @@ namespace Ex04.Menus.Interfaces
         {
             bool status = false;
             int result = -1;
-            Console.WriteLine("Please input your numeric choice in the following range: {0} - {1}", k_Zero, r_MenuItems.Count);
+            Console.WriteLine("Please input your numeric choice in the following range: {0} - {1}", k_Zero, this.r_MenuItems.Count);
             string input = Console.ReadLine();
             do
             {
@@ -81,17 +87,12 @@ namespace Ex04.Menus.Interfaces
                 else
                 {
                     status = false;
-                    Console.WriteLine("Invalid input!!! please input in the following range: {0} - {1}", k_Zero, r_MenuItems.Count);
+                    Console.WriteLine("Invalid input!!! please input in the following range: {0} - {1}", k_Zero, this.r_MenuItems.Count);
                     input = Console.ReadLine();
                 }
             }
             while (!status);
             return result;
-        }
-
-        public void AddItemToMenuList(MenuItem i_MenuItemToAdd)
-        {
-            this.r_MenuItems.Add(i_MenuItemToAdd);
         }
     }
 }

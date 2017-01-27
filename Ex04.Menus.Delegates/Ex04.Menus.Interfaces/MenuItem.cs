@@ -1,5 +1,4 @@
-﻿
-namespace Ex04.Menus.Interfaces
+﻿namespace Ex04.Menus.Interfaces
 {
     public abstract class MenuItem
     {
@@ -13,7 +12,6 @@ namespace Ex04.Menus.Interfaces
         public string MenuName
         {
             get { return this.m_MenuHeaderName; }
-            //set { this.m_MenuHeaderName = value; }
         }
 
         internal abstract void ExecuteActionOrShowSubMenu();
