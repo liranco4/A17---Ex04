@@ -9,6 +9,7 @@ namespace Ex04.Menus.Delegates
         private readonly List<MenuItem> r_MenuCollection;
         private const string k_Back = "Back";
         private const int k_Zero = 0;
+        private const int k_One = 1;
 
         public MenuWithInnerMenusCollection(string i_MenuName)
             : base(i_MenuName)
@@ -28,6 +29,7 @@ namespace Ex04.Menus.Delegates
 
         internal override void ExecuteOperationOrShowInnerMenu()
         {
+            StringBuilder menuBuilder = new StringBuilder();
             bool state = false;
             Console.Clear();
             if (r_MenuCollection.Count != k_Zero)
@@ -35,7 +37,6 @@ namespace Ex04.Menus.Delegates
                 do
                 {
                     int menuIndex = k_Zero;
-                    StringBuilder menuBuilder = new StringBuilder();
                     menuBuilder.Append(string.Format("{0}{1}====================={1}", this.MenuName, Environment.NewLine));
                     menuBuilder.Append(string.Format("{0}. {1}{2}", menuIndex, BackOrExitOperation, Environment.NewLine));
                     foreach (MenuItem menu in r_MenuCollection)
@@ -44,11 +45,12 @@ namespace Ex04.Menus.Delegates
                     }
 
                     Console.WriteLine("{0}", menuBuilder.ToString());
+                    menuBuilder.Capacity = k_Zero;
                     int userChoice = getAndcheckInputLegality();
                     if (userChoice != k_Zero)
                     {
                         Console.Clear();
-                        r_MenuCollection[userChoice - 1].ExecuteOperationOrShowInnerMenu();
+                        r_MenuCollection[userChoice - k_One].ExecuteOperationOrShowInnerMenu();
                     }
                     else
                     {
@@ -68,7 +70,7 @@ namespace Ex04.Menus.Delegates
             string input = Console.ReadLine();
             do
             {
-                if (input.Length == 1 && int.TryParse(input, out result) && result >= k_Zero && result <= r_MenuCollection.Count)
+                if (input.Length == k_One && int.TryParse(input, out result) && result >= k_Zero && result <= r_MenuCollection.Count)
                 {
                     status = true;
                 }

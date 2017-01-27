@@ -8,6 +8,8 @@ namespace Ex04.Menus.Interfaces
     {
         private const string k_Back = "Back";
         private const int k_Zero = 0;
+        private const int k_One = 1;
+
         private readonly List<MenuItem> r_MenuItems = new List<MenuItem>();
 
         public MenuItemsList(string i_MenuHeaderName)
@@ -35,7 +37,7 @@ namespace Ex04.Menus.Interfaces
 
                 do
                 {
-                    lineindex = 1;
+                    lineindex = k_One;
                     menuToPrint.AppendLine(string.Format("{0}{1}{2}", this.MenuName, Environment.NewLine, "====================="));
                     menuToPrint.Append(string.Format("0. {0}{1}", this.BackOrExitMsgToUser, Environment.NewLine));
                     foreach (MenuItem item in this.r_MenuItems)
@@ -55,7 +57,7 @@ namespace Ex04.Menus.Interfaces
                     else
                     {
                         Console.Clear();
-                        this.r_MenuItems[userChoice - 1].ExecuteActionOrShowSubMenu();
+                        this.r_MenuItems[userChoice - k_One].ExecuteActionOrShowSubMenu();
                     }
                 }
                 while (!backOrExitFlag);
@@ -72,7 +74,7 @@ namespace Ex04.Menus.Interfaces
             string input = Console.ReadLine();
             do
             {
-                if (input.Length == 1 && int.TryParse(input, out result) && result >= k_Zero && result <= r_MenuItems.Count)
+                if (input.Length == k_One && int.TryParse(input, out result) && result >= k_Zero && result <= r_MenuItems.Count)
                 {
                     status = true;
                 }
