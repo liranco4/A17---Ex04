@@ -65,36 +65,6 @@ namespace Ex04.Menus.Interfaces
             }
         }
 
-        //private int checkUserInput()
-        //{
-        //    bool isInputValid = true;
-        //    bool loopFlag = true;
-        //    int userInput = k_Zero;
-        //    do
-        //    {
-        //        isInputValid = int.TryParse(Console.ReadLine(), out userInput);
-
-        //        if (!isInputValid)
-        //        {
-        //            loopFlag = false; //שכפול קוד
-        //            Console.Write("Please enter valid input:");
-        //        }
-        //        else if (userInput >= k_Zero && userInput <= this.r_MenuItems.Count)
-        //        {
-        //            loopFlag = true;
-        //            break;
-        //        }
-        //        else
-        //        {
-        //            loopFlag = false; // שכפול קוד
-        //            Console.Write("Please enter valid input:");
-        //        }
-        //    }
-        //    while (!loopFlag);
-
-        //    return userInput;
-        //}
-
         private int getAndcheckInputLegality()
         {
             bool status = false;
@@ -103,7 +73,7 @@ namespace Ex04.Menus.Interfaces
             string input = Console.ReadLine();
             do
             {
-                if ( input.Length == 1 && int.TryParse(input, out result) && result >= k_Zero && result <= r_MenuItems.Count)
+                if (input.Length == 1 && int.TryParse(input, out result) && result >= k_Zero && result <= r_MenuItems.Count)
                 {
                     status = true;
                 }
