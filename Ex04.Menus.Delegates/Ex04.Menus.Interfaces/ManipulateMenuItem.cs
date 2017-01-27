@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace Ex04.Menus.Interfaces
 {
     public class ManipulateMenuItem : MenuItem
@@ -14,7 +11,7 @@ namespace Ex04.Menus.Interfaces
             this.m_UserChoice = i_UserChoiceMethod;
         }
 
-        internal override void ExecuteActionOrSubMenu()
+        internal override void ExecuteActionOrShowSubMenu()
         {
             this.m_UserChoice.ExecuteUserChoice();
         }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace Ex04.Menus.Interfaces
 {
     public class MainMenu : MenuItemsList
@@ -11,12 +8,19 @@ namespace Ex04.Menus.Interfaces
         public MainMenu(string i_MenuName)
            : base(i_MenuName)
         {
-            this.m_BackOrExitMsgToUser = k_Exit;
+        }
+
+        protected override string BackOrExitMsgToUser
+        {
+            get
+            {
+                return k_Exit;
+            }
         }
 
         public void Show()
         {
-            this.ExecuteActionOrSubMenu();
+            this.ExecuteActionOrShowSubMenu();
         }
     }
 }

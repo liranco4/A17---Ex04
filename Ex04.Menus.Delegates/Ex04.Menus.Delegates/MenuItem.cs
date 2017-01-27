@@ -17,6 +17,6 @@
             }
         }
 
-        internal abstract void OnExecuteOperationOrShowInnerMenu();
+        internal abstract void ExecuteOperationOrShowInnerMenu();
     }
 }

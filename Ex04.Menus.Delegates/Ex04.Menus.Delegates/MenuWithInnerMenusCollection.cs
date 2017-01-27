@@ -8,6 +8,7 @@ namespace Ex04.Menus.Delegates
     {
         private readonly List<MenuItem> r_MenuCollection;
         private const string k_Back = "Back";
+        private const int k_Zero = 0;
 
         public MenuWithInnerMenusCollection(string i_MenuName)
             : base(i_MenuName)
@@ -25,17 +26,17 @@ namespace Ex04.Menus.Delegates
             get { return k_Back; }
         }
 
-        internal override void OnExecuteOperationOrShowInnerMenu()
+        internal override void ExecuteOperationOrShowInnerMenu()
         {
             bool state = false;
             Console.Clear();
-            if (r_MenuCollection.Count != 0)
+            if (r_MenuCollection.Count != k_Zero)
             {
                 do
                 {
-                    int menuIndex = 0;
+                    int menuIndex = k_Zero;
                     StringBuilder menuBuilder = new StringBuilder();
-                    menuBuilder.Append(string.Format("{0}{1}___________________________{1}", this.MenuName, Environment.NewLine));
+                    menuBuilder.Append(string.Format("{0}{1}====================={1}", this.MenuName, Environment.NewLine));
                     menuBuilder.Append(string.Format("{0}. {1}{2}", menuIndex, BackOrExitOperation, Environment.NewLine));
                     foreach (MenuItem menu in r_MenuCollection)
                     {
@@ -44,10 +45,10 @@ namespace Ex04.Menus.Delegates
 
                     Console.WriteLine("{0}", menuBuilder.ToString());
                     int userChoice = getAndcheckInputLegality();
-                    if (userChoice != 0)
+                    if (userChoice != k_Zero)
                     {
                         Console.Clear();
-                        r_MenuCollection[userChoice - 1].OnExecuteOperationOrShowInnerMenu();
+                        r_MenuCollection[userChoice - 1].ExecuteOperationOrShowInnerMenu();
                     }
                     else
                     {
@@ -63,18 +64,18 @@ namespace Ex04.Menus.Delegates
         {
             bool status = false;
             int result = -1;
-            Console.WriteLine("Please input your numeric choice in the following range: {0} - {1}", 0, r_MenuCollection.Count);
+            Console.WriteLine("Please input your numeric choice in the following range: {0} - {1}", k_Zero, r_MenuCollection.Count);
             string input = Console.ReadLine();
             do
             {
-                if (int.TryParse(input, out result) && result >= 0 && result <= r_MenuCollection.Count)
+                if (int.TryParse(input, out result) && result >= k_Zero && result <= r_MenuCollection.Count)
                 {
                     status = true;
                 }
                 else
                 {
                     status = false;
-                    Console.WriteLine("Invalid input!!! please input in the following range: {0} - {1}", 0, r_MenuCollection.Count);
+                    Console.WriteLine("Invalid input!!! please input in the following range: {0} - {1}", k_Zero, r_MenuCollection.Count);
                     input = Console.ReadLine();
                 }
             }

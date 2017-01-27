@@ -11,7 +11,7 @@
 
         public event Executer ExecuteMenuOperation;
 
-        internal override void OnExecuteOperationOrShowInnerMenu()
+        internal override void ExecuteOperationOrShowInnerMenu()
         {
             if (this.ExecuteMenuOperation != null)
             {

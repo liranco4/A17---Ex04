@@ -15,7 +15,7 @@
 
 		public void Show()
 		{
-			this.OnExecuteOperationOrShowInnerMenu();
+			this.ExecuteOperationOrShowInnerMenu();
 		}
 	}
 }

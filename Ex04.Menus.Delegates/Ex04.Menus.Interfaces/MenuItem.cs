@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace Ex04.Menus.Interfaces
 {
     public abstract class MenuItem
@@ -19,6 +16,6 @@ namespace Ex04.Menus.Interfaces
             //set { this.m_MenuHeaderName = value; }
         }
 
-        internal abstract void ExecuteActionOrSubMenu();
+        internal abstract void ExecuteActionOrShowSubMenu();
     }
 }

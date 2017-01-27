@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Ex04.Menus;
 
 namespace Ex04.Menus.Test
 {
@@ -24,14 +21,14 @@ namespace Ex04.Menus.Test
             Interfaces.ManipulateMenuItem versionMenuItemInterface = new Interfaces.ManipulateMenuItem("Show Version", new ShowVersion());
             Interfaces.ManipulateMenuItem charsCounterItemInterface = new Interfaces.ManipulateMenuItem("Letters Counter", new CharsCount());
             Interfaces.ManipulateMenuItem countSpacesItemInterface = new Interfaces.ManipulateMenuItem("Count Spaces", new CountSpaces());
-            timeDateMenuItemInterface.AddItemToMenu(showTimeItemInterface);
-            timeDateMenuItemInterface.AddItemToMenu(showDateItemInterface);
-            versionAndActionsMenuItemInterface.AddItemToMenu(versionMenuItemInterface);
-            actionsMenuItemInterface.AddItemToMenu(charsCounterItemInterface);
-            actionsMenuItemInterface.AddItemToMenu(countSpacesItemInterface);
-            versionAndActionsMenuItemInterface.AddItemToMenu(actionsMenuItemInterface);
-            mainMenuInterface.AddItemToMenu(timeDateMenuItemInterface);
-            mainMenuInterface.AddItemToMenu(versionAndActionsMenuItemInterface);
+            timeDateMenuItemInterface.AddItemToMenuList(showTimeItemInterface);
+            timeDateMenuItemInterface.AddItemToMenuList(showDateItemInterface);
+            versionAndActionsMenuItemInterface.AddItemToMenuList(versionMenuItemInterface);
+            actionsMenuItemInterface.AddItemToMenuList(charsCounterItemInterface);
+            actionsMenuItemInterface.AddItemToMenuList(countSpacesItemInterface);
+            versionAndActionsMenuItemInterface.AddItemToMenuList(actionsMenuItemInterface);
+            mainMenuInterface.AddItemToMenuList(timeDateMenuItemInterface);
+            mainMenuInterface.AddItemToMenuList(versionAndActionsMenuItemInterface);
             mainMenuInterface.Show();
         }
 
