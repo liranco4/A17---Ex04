@@ -68,7 +68,7 @@ namespace Ex04.Menus.Delegates
             string input = Console.ReadLine();
             do
             {
-                if (int.TryParse(input, out result) && result >= k_Zero && result <= r_MenuCollection.Count)
+                if (input.Length == 1 && int.TryParse(input, out result) && result >= k_Zero && result <= r_MenuCollection.Count)
                 {
                     status = true;
                 }
