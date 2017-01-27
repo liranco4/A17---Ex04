@@ -32,25 +32,25 @@ namespace Ex04.Menus.Delegates
             StringBuilder menuBuilder = new StringBuilder();
             bool state = false;
             Console.Clear();
-            if (r_MenuCollection.Count != k_Zero)
+            if (this.r_MenuCollection.Count != k_Zero)
             {
                 do
                 {
                     int menuIndex = k_Zero;
                     menuBuilder.Append(string.Format("{0}{1}====================={1}", this.MenuName, Environment.NewLine));
-                    menuBuilder.Append(string.Format("{0}. {1}{2}", menuIndex, BackOrExitOperation, Environment.NewLine));
-                    foreach (MenuItem menu in r_MenuCollection)
+                    menuBuilder.Append(string.Format("{0}. {1}{2}", menuIndex, this.BackOrExitOperation, Environment.NewLine));
+                    foreach (MenuItem menu in this.r_MenuCollection)
                     {
                         menuBuilder.Append(string.Format("{0}. {1}{2}", ++menuIndex, menu.MenuName, Environment.NewLine));
                     }
 
                     Console.WriteLine("{0}", menuBuilder.ToString());
                     menuBuilder.Capacity = k_Zero;
-                    int userChoice = getAndcheckInputLegality();
+                    int userChoice = this.getAndcheckInputLegality();
                     if (userChoice != k_Zero)
                     {
                         Console.Clear();
-                        r_MenuCollection[userChoice - k_One].ExecuteOperationOrShowInnerMenu();
+                        this.r_MenuCollection[userChoice - k_One].ExecuteOperationOrShowInnerMenu();
                     }
                     else
                     {
@@ -66,18 +66,18 @@ namespace Ex04.Menus.Delegates
         {
             bool status = false;
             int result = -1;
-            Console.WriteLine("Please input your numeric choice in the following range: {0} - {1}", k_Zero, r_MenuCollection.Count);
+            Console.WriteLine("Please input your numeric choice in the following range: {0} - {1}", k_Zero, this.r_MenuCollection.Count);
             string input = Console.ReadLine();
             do
             {
-                if (input.Length == k_One && int.TryParse(input, out result) && result >= k_Zero && result <= r_MenuCollection.Count)
+                if (input.Length == k_One && int.TryParse(input, out result) && result >= k_Zero && result <= this.r_MenuCollection.Count)
                 {
                     status = true;
                 }
                 else
                 {
                     status = false;
-                    Console.WriteLine("Invalid input!!! please input in the following range: {0} - {1}", k_Zero, r_MenuCollection.Count);
+                    Console.WriteLine("Invalid input!!! please input in the following range: {0} - {1}", k_Zero, this.r_MenuCollection.Count);
                     input = Console.ReadLine();
                 }
             }
