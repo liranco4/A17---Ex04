@@ -43,7 +43,6 @@ namespace Ex04.Menus.Interfaces
                         menuToPrint.Append(string.Format("{0}. {1}{2}", lineindex, item.MenuName, Environment.NewLine));
                         lineindex++;
                     }
-                    //menuToPrint.Append(string.Format("Please enter input from menu (between 0 to {0}):", this.r_MenuItems.Count));
                     Console.Write(menuToPrint);
                     menuToPrint.Length = k_Zero;
                     menuToPrint.Capacity = k_Zero;
