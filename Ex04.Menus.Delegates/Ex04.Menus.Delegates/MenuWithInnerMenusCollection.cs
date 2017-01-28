@@ -6,10 +6,11 @@ namespace Ex04.Menus.Delegates
 {
     public class MenuWithInnerMenusCollection : MenuItem
     {
-        private readonly List<MenuItem> r_MenuCollection;
         private const string k_Back = "Back";
         private const int k_Zero = 0;
         private const int k_One = 1;
+        private readonly List<MenuItem> r_MenuCollection;
+
 
         public MenuWithInnerMenusCollection(string i_MenuName)
             : base(i_MenuName)
@@ -45,6 +46,7 @@ namespace Ex04.Menus.Delegates
                     }
 
                     Console.WriteLine("{0}", menuBuilder.ToString());
+                    menuBuilder.Length = k_Zero;
                     menuBuilder.Capacity = k_Zero;
                     int userChoice = this.getAndcheckInputLegality();
                     if (userChoice != k_Zero)
