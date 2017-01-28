@@ -40,53 +40,53 @@ namespace Ex04.Menus.Test
             Delegates.OperationMenu showTimeMenu = new Delegates.OperationMenu("Show Time");
             dateTimeMenu.AddToCollection(showDateMenu);
             dateTimeMenu.AddToCollection(showTimeMenu);
-            showDateMenu.ExecuteMenuOperation += showDate;
-            showTimeMenu.ExecuteMenuOperation += showTime;
+            showDateMenu.ExecuteMenuOperation += executeMenuOperation_showDate;
+            showTimeMenu.ExecuteMenuOperation += executeMenuOperation_showTime;
             Delegates.MenuWithInnerMenusCollection versionAndActionsMenu = new Delegates.MenuWithInnerMenusCollection("Version And Actions");
             Delegates.OperationMenu versionMenu = new Delegates.OperationMenu("Show Version");
             Delegates.MenuWithInnerMenusCollection actionsMenu = new Delegates.MenuWithInnerMenusCollection("Actions");
             versionAndActionsMenu.AddToCollection(versionMenu);
             versionAndActionsMenu.AddToCollection(actionsMenu);
-            versionMenu.ExecuteMenuOperation += showVersion;
+            versionMenu.ExecuteMenuOperation += executeMenuOperation_showVersion;
             Delegates.OperationMenu charsCounterMenu = new Delegates.OperationMenu("Letters Counter");
             Delegates.OperationMenu countSpacesMenu = new Delegates.OperationMenu("Count Spaces");
             actionsMenu.AddToCollection(charsCounterMenu);
             actionsMenu.AddToCollection(countSpacesMenu);
-            charsCounterMenu.ExecuteMenuOperation += charsCounter;
-            countSpacesMenu.ExecuteMenuOperation += spacesCounter;
+            charsCounterMenu.ExecuteMenuOperation += executeMenuOperation_charsCounter;
+            countSpacesMenu.ExecuteMenuOperation += executeMenuOperation_spacesCounter;
             mainMenu.AddToCollection(dateTimeMenu);
             mainMenu.AddToCollection(versionAndActionsMenu);
             mainMenu.Show();
         }
 
-        private static void showDate()
+        private static void executeMenuOperation_showDate()
         {
             Console.WriteLine(DateTime.Now.ToShortDateString());
         }
 
-        private static void showTime()
+        private static void executeMenuOperation_showTime()
         {
             Console.WriteLine(DateTime.Now.ToString("hh:mm:ss tt"));
         }
 
-        private static void charsCounter()
+        private static void executeMenuOperation_charsCounter()
         {
-            int numberOfLettersInSentence = countNumOfLettersInSentence(userInput());
+            int numberOfLettersInSentence = countNumOfLettersInSentence(getUserInput());
             Console.WriteLine("There are {0} letters in the sentence", numberOfLettersInSentence);
         }
 
-        private static void spacesCounter()
+        private static void executeMenuOperation_spacesCounter()
         {
-            int numberOfSpacesInSentence = countNumOfSpacesInSentence(userInput());
+            int numberOfSpacesInSentence = countNumOfSpacesInSentence(getUserInput());
             Console.WriteLine("There are {0} Spaces in the sentence", numberOfSpacesInSentence);
         }
 
-        private static void showVersion()
+        private static void executeMenuOperation_showVersion()
         {
             Console.WriteLine("Version: 17.1.4.0");
         }
 
-        private static string userInput()
+        private static string getUserInput()
         {
             Console.WriteLine("Please enter a sentence:");
             return Console.ReadLine();

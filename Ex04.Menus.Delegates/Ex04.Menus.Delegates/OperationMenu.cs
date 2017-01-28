@@ -13,6 +13,11 @@
 
         internal override void ExecuteOperationOrShowInnerMenu()
         {
+            this.OnExecuteMenuOperation();
+        }
+
+        protected virtual void OnExecuteMenuOperation()
+        {
             if (this.ExecuteMenuOperation != null)
             {
                 this.ExecuteMenuOperation.Invoke();

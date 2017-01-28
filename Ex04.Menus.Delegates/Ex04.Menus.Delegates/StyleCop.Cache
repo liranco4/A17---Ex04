@@ -324,7 +324,7 @@
     <timestamps>
       <styleCop>2016/05/12 21:26:32.000</styleCop>
       <settingsFile>2016/04/20 22:35:08.000</settingsFile>
-      <sourceFile>2017/01/28 18:50:47.430</sourceFile>
+      <sourceFile>2017/01/28 19:20:40.457</sourceFile>
       <parser>2016/05/12 21:26:32.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016/05/12 21:26:32.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>337564806</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -375,6 +375,16 @@
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
         <line>14</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>19</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="ElementMustBeginWithUpperCaseLetter" ruleCheckId="SA1300">
+        <context>method names begin with an upper-case letter: onExecuteMenuOperation.</context>
+        <line>19</line>
         <warning>False</warning>
       </violation>
     </violations>
